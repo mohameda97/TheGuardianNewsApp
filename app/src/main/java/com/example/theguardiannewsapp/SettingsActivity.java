@@ -1,13 +1,13 @@
 package com.example.theguardiannewsapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -19,35 +19,35 @@ public class SettingsActivity extends AppCompatActivity {
 
     public static class NewsPreferenceFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.setting_main);
-        Preference types = findPreference(getString(R.string.settings_type_key));
-        bindPreferenceSummaryToValue(types);
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.setting_main);
+            Preference types = findPreference(getString(R.string.settings_type_key));
+            bindPreferenceSummaryToValue(types);
 
-        Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
-        bindPreferenceSummaryToValue(orderBy);
-    }
-
-    private void bindPreferenceSummaryToValue(Preference preference) {
-        preference.setOnPreferenceChangeListener(this);
-
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
-        String preferenceString = sharedPreferences.getString(preference.getKey(),"");
-        onPreferenceChange(preference,preferenceString);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        String stringValue = newValue.toString();
-        ListPreference listPreference = (ListPreference) preference;
-        int prefIndex = listPreference.findIndexOfValue(stringValue);
-        if (prefIndex>=0){
-            CharSequence [] labels = listPreference.getEntries();
-            preference.setSummary(labels[prefIndex]);
+            Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
+            bindPreferenceSummaryToValue(orderBy);
         }
-        return true;
+
+        private void bindPreferenceSummaryToValue(Preference preference) {
+            preference.setOnPreferenceChangeListener(this);
+
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
+            String preferenceString = sharedPreferences.getString(preference.getKey(), "");
+            onPreferenceChange(preference, preferenceString);
+        }
+
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object newValue) {
+            String stringValue = newValue.toString();
+            ListPreference listPreference = (ListPreference) preference;
+            int prefIndex = listPreference.findIndexOfValue(stringValue);
+            if (prefIndex >= 0) {
+                CharSequence[] labels = listPreference.getEntries();
+                preference.setSummary(labels[prefIndex]);
+            }
+            return true;
+        }
     }
-}
 }

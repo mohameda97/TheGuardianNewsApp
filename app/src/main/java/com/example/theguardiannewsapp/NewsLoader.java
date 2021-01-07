@@ -1,17 +1,16 @@
 package com.example.theguardiannewsapp;
 
+import android.content.AsyncTaskLoader;
 import android.content.Context;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import android.content.AsyncTaskLoader;
 
 import java.util.List;
 
 public class NewsLoader extends AsyncTaskLoader<List<News>> {
-    private String mUrl;
+    private final String mUrl;
 
-    public NewsLoader(@NonNull Context context,String url) {
+    public NewsLoader(@NonNull Context context, String url) {
         super(context);
         mUrl = url;
     }
@@ -24,10 +23,9 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
 
     @Override
     public List<News> loadInBackground() {
-        if (mUrl == null){
+        if (mUrl == null) {
             return null;
-        }
-        else {
+        } else {
             return QueryUtils.fetchNewsData(mUrl);
         }
     }

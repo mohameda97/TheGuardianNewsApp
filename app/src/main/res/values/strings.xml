@@ -38,4 +38,5 @@
     <string name="settings_type_debates_label">Debates</string>
     <string name="settings_type_debates_value" translatable="false">debates</string>
     <string name="news_settings">News Settings</string>
+    <string name="author_name">Author Name:</string>
 </resources>

@@ -1,94 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/light_blue"
     android:orientation="vertical"
-    android:padding="@dimen/viewGroupPadding"
-    android:background="@color/light_blue">
+    android:padding="@dimen/viewGroupPadding">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/viewsMargin"
         android:layout_marginEnd="@dimen/viewsMargin"
-        >
+        android:layout_marginBottom="@dimen/viewsMargin">
 
         <TextView
             style="@style/TitleTextStyle"
-            android:text="@string/article_title"
-            android:textSize="18sp"
             android:layout_marginEnd="@dimen/viewsMargin"
-            />
+            android:text="@string/article_title"
+            android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/title"
             style="@style/TextStyle"
             android:ellipsize="end"
             android:maxLines="1"
-            android:id="@+id/title"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/viewsMargin"
         android:layout_marginEnd="@dimen/viewsMargin"
-        >
+        android:layout_marginBottom="@dimen/viewsMargin">
 
         <TextView
             style="@style/TitleTextStyle"
+            android:layout_marginEnd="@dimen/viewsMargin"
             android:text="@string/section_name"
             android:textSize="18sp"
-            android:layout_marginEnd="@dimen/viewsMargin"
 
             />
 
         <TextView
-            style="@style/TextStyle"
             android:id="@+id/section"
-            android:textSize="16sp"
-            />
+            style="@style/TextStyle"
+            android:textSize="16sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/viewsMargin"
         android:layout_marginEnd="@dimen/viewsMargin"
-        >
+        android:layout_marginBottom="@dimen/viewsMargin">
 
         <TextView
             style="@style/TitleTextStyle"
+            android:layout_marginEnd="@dimen/viewsMargin"
             android:text="@string/type"
-            android:layout_marginEnd="@dimen/viewsMargin"
 
             />
 
         <TextView
-            style="@style/TextStyle"
             android:id="@+id/type"
-      />
+            style="@style/TextStyle" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/viewsMargin"
         android:layout_marginEnd="@dimen/viewsMargin"
-        >
+        android:layout_marginBottom="@dimen/viewsMargin">
 
         <TextView
             style="@style/TitleTextStyle"
-            android:text="@string/date"
             android:layout_marginEnd="@dimen/viewsMargin"
+            android:text="@string/author_name"
 
             />
 
         <TextView
-            style="@style/TextStyle"
-            android:id="@+id/date"
+            android:id="@+id/author_name"
+            style="@style/TextStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/viewsMargin"
+        android:layout_marginBottom="@dimen/viewsMargin">
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_marginEnd="@dimen/viewsMargin"
+            android:text="@string/date"
+
             />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/TextStyle" />
 
     </LinearLayout>
 </LinearLayout>
