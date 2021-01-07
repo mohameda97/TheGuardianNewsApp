@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Set padding for viewGroup-->
+    <dimen name="viewGroupPadding">16dp</dimen>
+    <!--Set bottomMargin for views-->
+    <dimen name="viewsMargin">8dp</dimen>
+
+
+</resources>

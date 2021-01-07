@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">TheGuardianNewsApp</string>
+    <string name="article_title">Title: </string>
+    <string name="section_name">Section Name: </string>
+    <string name="date">Date: </string>
+    <string name="type">Type: </string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="no_data_to_view">No Data To View</string>
+    <string name="settings_menu_item">Settings</string>
+    <!-- Strings For Types Preference  -->
+    <string name="settings_type_label">Type</string>
+    <string name="settings_type_key" translatable="false">type</string>
+    <string name="settings_type_default" translatable="false">@string/settings_type_debates_value</string>
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_newest_value</string>
+
+
+    <!-- Label for order-by newest option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_newest_label">Newest</string>
+    <string name="settings_order_by_newest_value" translatable="false">newest</string>
+
+    <!-- Label for order-by oldest option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_oldest_label">Oldest</string>
+    <string name="settings_order_by_oldest_value" translatable="false">oldest</string>
+
+    <!-- Label for order-by relevance  option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_relevance_label">Relevance</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+
+    <!-- Label for types economy  option [CHAR LIMIT=20] -->
+    <string name="settings_type_economy_label">Economy</string>
+    <string name="settings_type_economy_value" translatable="false">economy</string>
+
+    <!-- Label for types debates option [CHAR LIMIT=20] -->
+    <string name="settings_type_debates_label">Debates</string>
+    <string name="settings_type_debates_value" translatable="false">debates</string>
+    <string name="news_settings">News Settings</string>
+</resources>
