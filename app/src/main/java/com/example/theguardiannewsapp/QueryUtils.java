@@ -50,16 +50,16 @@ public class QueryUtils {
 
             for (int i = 0; i < resultsArray.length(); i++) {
                 JSONObject results = resultsArray.getJSONObject(i);
-                String type = results.getString("type");
-                String sectionName = results.getString("sectionName");
-                String webPublicationDate = results.getString("webPublicationDate");
-                String webTitle = results.getString("webTitle");
-                String webUrl = results.getString("webUrl");
+                String type = results.optString("type");
+                String sectionName = results.optString("sectionName");
+                String webPublicationDate = results.optString("webPublicationDate");
+                String webTitle = results.optString("webTitle");
+                String webUrl = results.optString("webUrl");
                 JSONArray tags = results.getJSONArray("tags");
                 if (tags.length() > 0) {
                     JSONObject firstTag = tags.getJSONObject(0);
-                    firstName = firstTag.getString("firstName");
-                    lastName = firstTag.getString("lastName");
+                    firstName = firstTag.optString("firstName");
+                    lastName = firstTag.optString("lastName");
                 }
 
                 String fullName = firstName + " " + lastName;
